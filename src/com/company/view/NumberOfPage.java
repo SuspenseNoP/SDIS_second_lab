@@ -25,7 +25,6 @@ public class NumberOfPage {
         frame.setBounds(dimension.width / 2 - 100, dimension.height / 2 - 100, 100, 150);
         frame.setTitle("What page?");
 
-        panel.setBackground(Color.black);
 
         SubmitButton = new JButton("Submit");
         SubmitButton.setLocation(10, 40);

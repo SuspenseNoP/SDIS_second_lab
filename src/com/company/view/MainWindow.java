@@ -7,7 +7,7 @@ import java.awt.*;
 
 
 public class MainWindow extends JFrame {
-    private JButton createButton, deleteButton, searchButton, cleanButton, numberOfNotesButton;
+    private JButton createButton, searchButton, numberOfNotesButton;
     private JButton firstButton, previousButton, numberOfPageButton, nextButton, lastButton, saveButton;
     private MainWindowController controller;
 
@@ -18,18 +18,17 @@ public class MainWindow extends JFrame {
     public void init() {
         JFrame frame = new JFrame();
         JPanel panel = new JPanel();
-        //panel.setLayout(null);
+
 
         Toolkit toolkit = Toolkit.getDefaultToolkit();
         Dimension dimension = toolkit.getScreenSize();
         frame.setBounds(dimension.width / 2 - 250, dimension.height / 2 - 200, 500, 600);
         frame.setTitle("MAIN WINDOW ");
 
-        panel.setBackground(Color.black);
 
         JLabel number_of_notes = new JLabel();
         number_of_notes.setText("I found " + controller.getNumberOfAllNotes() + " notes");
-        number_of_notes.setForeground(Color.WHITE);
+
         panel.add(number_of_notes);
 
 
@@ -38,9 +37,9 @@ public class MainWindow extends JFrame {
 
 
         createButton = new JButton("Create");
-        //deleteButton = new JButton("Delete");
+
         searchButton = new JButton("Search and delete");
-        //cleanButton = new JButton("Clean");
+
         Integer tempNum = controller.getNumOfNotes();
         numberOfNotesButton = new JButton(tempNum.toString());
         firstButton = new JButton("<<");
@@ -52,9 +51,9 @@ public class MainWindow extends JFrame {
         saveButton = new JButton("Save");
 
         panel.add(createButton);
-        //panel.add(deleteButton);
+
         panel.add(searchButton);
-        //panel.add(cleanButton);
+
         panel.add(numberOfNotesButton);
         panel.add(emptySpace);
         panel.add(firstButton);

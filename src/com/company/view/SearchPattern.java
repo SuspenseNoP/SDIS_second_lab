@@ -23,9 +23,9 @@ public class SearchPattern {
         frame.setBounds(dimension.width / 2 - 100, dimension.height / 2 - 100, 250, 200);
         frame.setTitle("Search");
 
-        panel.setBackground(Color.black);
+
         String[] columnNames = controller.getColumnNames();
-        String[] choose = {columnNames[0], columnNames[1], columnNames[2], columnNames[3], columnNames[4],"Тип пропуска"};
+        String[] choose = {columnNames[0], columnNames[1], columnNames[2], columnNames[3], columnNames[4], "Тип пропуска"};
 
         JComboBox searchList = new JComboBox(choose);
         searchList.setLocation(10, 20);

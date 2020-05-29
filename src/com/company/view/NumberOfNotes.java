@@ -26,7 +26,6 @@ public class NumberOfNotes {
         frame.setBounds(dimension.width / 2 - 100, dimension.height / 2 - 100, 100, 150);
         frame.setTitle("How much notes on the page?");
 
-        panel.setBackground(Color.black);
 
         SubmitButton = new JButton("Submit");
         SubmitButton.setLocation(10, 40);

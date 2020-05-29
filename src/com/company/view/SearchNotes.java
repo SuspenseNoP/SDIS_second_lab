@@ -26,7 +26,6 @@ public class SearchNotes {
         frame.setBounds(dimension.width / 2 - 250, dimension.height / 2 - 200, 500, 600);
         frame.setTitle("MAIN WINDOW ");
 
-        panel.setBackground(Color.black);
 
         JButton deleteButton = new JButton("Delete");
         panel.add(deleteButton);

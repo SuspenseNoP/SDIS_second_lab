@@ -26,13 +26,12 @@ public class SearchWindowInt {
         frame.setBounds(dimension.width / 2 - 100, dimension.height / 2 - 100, 320, 200);
         frame.setTitle("Search");
 
-        panel.setBackground(Color.black);
 
         switch (numOfCase) {
             case 2: {
                 JLabel FirstLabel = new JLabel();
                 FirstLabel.setText("Select number of pass cause of illness ");
-                FirstLabel.setForeground(Color.WHITE);
+
                 FirstLabel.setSize(290, 20);
                 FirstLabel.setLocation(20, 20);
                 panel.add(FirstLabel);
@@ -41,9 +40,9 @@ public class SearchWindowInt {
                 smallField = new JTextField(15);
                 smallField.setLocation(20, 50);
                 smallField.setSize(50, 20);
-                //smallField.setToolTipText("Короткое поле");
+
                 smallField.addActionListener(e -> {
-                    // Отображение введенного текста
+
                     smallField.getText();
                 });
                 panel.add(smallField);
@@ -76,7 +75,7 @@ public class SearchWindowInt {
             case 3: {
                 JLabel FirstLabel = new JLabel();
                 FirstLabel.setText("Select number of pass cause of reasons");
-                FirstLabel.setForeground(Color.WHITE);
+
                 FirstLabel.setSize(290, 20);
                 FirstLabel.setLocation(20, 20);
                 panel.add(FirstLabel);
@@ -85,9 +84,9 @@ public class SearchWindowInt {
                 smallField = new JTextField(15);
                 smallField.setLocation(20, 50);
                 smallField.setSize(50, 20);
-                //smallField.setToolTipText("Короткое поле");
+
                 smallField.addActionListener(e -> {
-                    // Отображение введенного текста
+
                     smallField.getText();
                 });
                 panel.add(smallField);
@@ -119,7 +118,7 @@ public class SearchWindowInt {
             case 4: {
                 JLabel FirstLabel = new JLabel();
                 FirstLabel.setText("Select number of pass cause of nothing ");
-                FirstLabel.setForeground(Color.WHITE);
+
                 FirstLabel.setSize(290, 20);
                 FirstLabel.setLocation(20, 20);
                 panel.add(FirstLabel);
@@ -128,7 +127,7 @@ public class SearchWindowInt {
                 smallField = new JTextField(15);
                 smallField.setLocation(20, 50);
                 smallField.setSize(50, 20);
-                //smallField.setToolTipText("Короткое поле");
+
                 smallField.addActionListener(e -> {
                     // Отображение введенного текста
                     smallField.getText();

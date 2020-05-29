@@ -2,17 +2,16 @@ package com.company.model;
 
 public class Student {
     private String name;
-            private int  group, illnesses, reasons, noReasons, all;
+    private int group, illnesses, reasons, noReasons, all;
 
-    public Student(String name, int group,  int illnesses, int reasons,int noReasons, int all){
-        this.noReasons =noReasons;
+    public Student(String name, int group, int illnesses, int reasons, int noReasons, int all) {
+        this.noReasons = noReasons;
         this.group = group;
-        this.name =name;
+        this.name = name;
         this.illnesses = illnesses;
         this.reasons = reasons;
         this.all = all;
     }
-
 
 
     public int getNoReasons() {

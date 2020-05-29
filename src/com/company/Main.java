@@ -1,9 +1,8 @@
 package com.company;
 
 import com.company.controller.MainWindowController;
-import com.company.model.GenerateFile;
 import com.company.model.Model;
-import com.company.view.HiWindow;
+import com.company.view.DownloadChoose;
 import org.xml.sax.SAXException;
 
 
@@ -14,18 +13,13 @@ public class Main {
 
 
 
-    public static void main(String[] args) throws IOException, SAXException, ParserConfigurationException {
-
-        GenerateFile generateFile = new GenerateFile();
-        generateFile.init();
+    public static void main(String[] args) {
 
         Model model = new Model();
         MainWindowController controller = new MainWindowController(model);
-        HiWindow hiWindow= new HiWindow(controller);
 
-            hiWindow.init();
-
-
+        DownloadChoose downloadChoose = new DownloadChoose(controller);
+        downloadChoose.init();
 
     }
 }

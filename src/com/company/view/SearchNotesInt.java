@@ -27,7 +27,6 @@ public class SearchNotesInt {
         frame.setBounds(dimension.width / 2 - 250, dimension.height / 2 - 200, 500, 600);
         frame.setTitle("MAIN WINDOW ");
 
-        panel.setBackground(Color.black);
 
         JButton deleteButton = new JButton("Delete");
         panel.add(deleteButton);
@@ -48,7 +47,7 @@ public class SearchNotesInt {
 
 
         deleteButton.addActionListener(e -> {
-            for(int i=from; i<to; i++){
+            for (int i = from; i < to; i++) {
                 String tempString = Integer.toString(i);
                 controller.deleteData(tempString, column);
             }

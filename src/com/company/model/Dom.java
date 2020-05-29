@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Dom {
-    public  ArrayList<Student> download(int file) {
+    public ArrayList<Student> download(int file) {
 
         ArrayList<Student> students = new ArrayList<>();
 
@@ -48,7 +48,6 @@ public class Dom {
             System.out.println("----------------------------");
 
 
-
             for (int temp = 0; temp < nList.getLength(); temp++) {
 
                 Node nNode = nList.item(temp);
@@ -60,15 +59,14 @@ public class Dom {
                     Element eElement = (Element) nNode;
 
                     Student student = new Student(eElement.getAttribute("name"),
-                    Integer.parseInt(eElement.getAttribute("group")),
-                    Integer.parseInt(eElement.getAttribute("illnesses")),
+                            Integer.parseInt(eElement.getAttribute("group")),
+                            Integer.parseInt(eElement.getAttribute("illnesses")),
                             Integer.parseInt(eElement.getAttribute("reasons")),
                             Integer.parseInt(eElement.getAttribute("noReasons")),
                             Integer.parseInt(eElement.getAttribute("all"))
                     );
 
                     students.add(student);
-
 
 
                 }
@@ -78,6 +76,6 @@ public class Dom {
         }
 
 
-        return  students;
+        return students;
     }
 }

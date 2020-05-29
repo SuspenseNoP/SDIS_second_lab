@@ -5,8 +5,7 @@ import java.util.ArrayList;
 public class Model {
 
 
-
-   private ArrayList<Student> students;
+    private ArrayList<Student> students;
 
 
     public ArrayList<Student> getStudents() {
@@ -17,7 +16,7 @@ public class Model {
         this.students = students;
     }
 
-    private String[] columnNames = {"ФИО","группа", "пропуск по болезни", "пропуск по другим причинам", "пропуск без причины","итого"};
+    private String[] columnNames = {"ФИО", "группа", "пропуск по болезни", "пропуск по другим причинам", "пропуск без причины", "итого"};
 
     public String[] getColumnNames() {
         return columnNames;

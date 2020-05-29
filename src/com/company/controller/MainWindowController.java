@@ -28,7 +28,7 @@ public class MainWindowController {
             data[i][0] = students.get(i).getName();
             data[i][1] = Integer.toString(students.get(i).getGroup());
             data[i][2] = Integer.toString(students.get(i).getIllnesses());
-            data[i][3] = Integer.toString( students.get(i).getReasons());
+            data[i][3] = Integer.toString(students.get(i).getReasons());
             data[i][4] = Integer.toString(students.get(i).getNoReasons());
             data[i][5] = Integer.toString(students.get(i).getAll());
         }
@@ -45,7 +45,7 @@ public class MainWindowController {
         model.setStudents(students);
     }
 
-    public ArrayList<Student> getStudent(){
+    public ArrayList<Student> getStudent() {
         return model.getStudents();
     }
 
@@ -253,24 +253,6 @@ public class MainWindowController {
 
     }
 
-    public String[][] getTwoSearchedData(String string, int column, String nstring, int ncolumn) {
-        String[][] data = convertData(model.getStudents());
-        String[][] tempData = new String[data.length][6];
-        int length = 0;
-
-        for (String[] datum : data) {
-            if (Objects.equals(datum[column], string) | Objects.equals(datum[ncolumn], nstring)) {
-                tempData[length] = datum;
-                length++;
-            }
-
-        }
-
-        String[][] lastData = new String[length][6];
-        System.arraycopy(tempData, 0, lastData, 0, length);
-        return lastData;
-    }
-
     public void deleteData(String string, int column) {
         String[][] data = convertData(model.getStudents());
         String[][] tempData = new String[data.length][6];
@@ -289,7 +271,7 @@ public class MainWindowController {
 
     }
 
-    public void deleteNullData( int column) {
+    public void deleteNullData(int column) {
         String[][] data = convertData(model.getStudents());
         String[][] tempData = new String[data.length][6];
         int length = 0;
@@ -300,26 +282,6 @@ public class MainWindowController {
                 length++;
             }
         }
-        String[][] lastData = new String[length][6];
-        System.arraycopy(tempData, 0, lastData, 0, length);
-        setStudent(lastData);
-
-
-    }
-
-    public void deleteTwoData(String string, int column, String nstring, int ncolumn) {
-        String[][] data = convertData(model.getStudents());
-        String[][] tempData = new String[data.length][6];
-        int length = 0;
-
-        for (String[] datum : data) {
-            if (!Objects.equals(datum[column], string) & !Objects.equals(datum[ncolumn], nstring)) {
-                tempData[length] = datum;
-                length++;
-            }
-
-        }
-
         String[][] lastData = new String[length][6];
         System.arraycopy(tempData, 0, lastData, 0, length);
         setStudent(lastData);
@@ -346,7 +308,6 @@ public class MainWindowController {
         }
         save.save(name, prof, getNumberOfAllNotes());
     }
-
 
     public int getFiles() {
         return files;
